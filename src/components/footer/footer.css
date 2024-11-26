@@ -1,0 +1,28 @@
+.footer {
+  position: relative;
+  z-index: -20;
+  background: #000;
+}
+
+.footer__inner {
+  padding: 32px 0;
+  color: rgb(187, 183, 175);
+  font-family: "Open Sans", sans-serif;
+  font-size: 17.33px;
+  font-weight: 600;
+  line-height: 30.33px;
+  text-align: center;
+}
+.footer__phone {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+  color: rgb(187, 183, 175);
+}
+
+@media (max-width: 768px) {
+  .footer__phone {
+    cursor: pointer;
+    color: rgb(12, 89, 147);
+  }
+}
