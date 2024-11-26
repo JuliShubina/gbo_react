@@ -1,0 +1,97 @@
+body {
+  /* position: relative;
+  z-index: -10; */
+  color: rgb(33, 33, 33);
+  font-family: "Playfair Display", serif;
+}
+
+:root {
+  --container-width: 1230px; /* базовое значение */
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --container-width: 992px; /* для экранов шириной до 1200px */
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --container-width: 860px;
+  }
+}
+@media (max-width: 992px) {
+  :root {
+    --container-width: 768px; /* для экранов шириной до 992px */
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-width: 576px; /* для экранов шириной до 768px */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%; /* для мобильных устройств, используем 100% ширины */
+  }
+}
+
+/* main {
+  position: relative;
+  z-index: -10;
+} */
+
+.wrapper {
+  /* position: relative;
+  z-index: -10; */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+h1 {
+  font-size: calc(40px + 32 * (100vw / 1230));
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc(40px + (32 + 32 * 0.7) * ((100vw - 320px) / 1230));
+  }
+}
+
+h2 {
+  font-size: calc(28px + 10 * (100vw / 1230));
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: calc(28px + (10 + 10 * 0.7) * ((100vw - 320px) / 1230));
+  }
+}
+
+h3 {
+  font-size: calc(21px + 6 * (100vw / 1230));
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: calc(21px + (6 + 6 * 0.7) * ((100vw - 320px) / 1230));
+  }
+}
+
+p {
+  line-height: 26px;
+  font-size: calc(16px + 3 * (100vw / 1230));
+}
+@media (max-width: 768px) {
+  p {
+    font-size: calc(16px + (3 + 3 * 0.7) * ((100vw - 320px) / 1230));
+  }
+}
