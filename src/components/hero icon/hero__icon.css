@@ -1,0 +1,18 @@
+.hero__content-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 100;
+  left: 50%;
+  font-size: 20px;
+  top: calc(100% - 48px);
+  /* visibility: hidden; */
+}
+.hero__content-icon:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  /* background-color: rgb(12, 89, 147); */
+}
