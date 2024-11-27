@@ -3,19 +3,12 @@ import styles from "./services.module.css";
 import HeroIcon from "../../components/hero icon/HeroIcon";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Hero from "../../components/hero/Hero";
 
 const Services = () => {
   return (
     <main className="main">
-      <section className={`${styles.hero} ${styles.intersection} ${styles.hero__background}`}>
-        {/* <section className="hero intersection hero__background"> */}
-        <div className="container">
-          <div className={styles.hero__content}>
-            <h1 className={styles.hero__contentTitle}>Послуги</h1>
-            <HeroIcon />
-          </div>
-        </div>
-      </section>
+      <Hero title="Послуги" />
       <section className="services">
         <div className="container">
           <div className={styles.services__cards}>

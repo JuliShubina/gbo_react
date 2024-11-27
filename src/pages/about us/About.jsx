@@ -8,7 +8,7 @@ import our_work3 from "../../images/our_work3.jpg";
 const About = () => {
   return (
     <main className="main">
-      <Hero />
+      <Hero title="Про нас" />
       <section className="advantages">
         <div className="container">
           <div className={styles.advantages__texts}>

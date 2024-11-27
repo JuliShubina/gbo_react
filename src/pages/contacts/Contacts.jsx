@@ -5,7 +5,7 @@ import styles from "./contacts.module.css";
 const Contacts = () => {
   return (
     <main className="main">
-      <Hero />
+      <Hero title="Наші контакти" />
       <section className="contacts">
         <div className="container">
           <div className={styles.workingHours}>
