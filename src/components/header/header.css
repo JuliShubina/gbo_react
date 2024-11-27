@@ -34,7 +34,7 @@
   font-weight: 500;
 }
 
-.menu__list-link span {
+.active {
   font-weight: 700;
   letter-spacing: 0.5px;
 }

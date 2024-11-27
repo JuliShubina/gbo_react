@@ -1,39 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
+import "./burger.css";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
-    <header className="header">
+    <header className={`header ${menuOpen ? "open" : ""}`}>
       <div className="header__inner">
-        <button className="header__burger-btn" id="burger">
+        <button onClick={toggleMenu} className="header__burger-btn" id="burger">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <a href="#" className="logo">
-          <div>auto-gbo-service</div>
-        </a>
+        <NavLink to="/" className="logo">
+          auto-gbo-service
+        </NavLink>
+
         <nav className="menu">
           <ul className="menu__list">
             <li className="menu__list-item">
-              <a href="#" className="menu__list-link">
-                <span>Головна</span>
-              </a>
+              <NavLink onClick={toggleMenu} to="/" className="menu__list-link">
+                Головна
+              </NavLink>
             </li>
             <li className="menu__list-item">
-              <a href="./services.html" className="menu__list-link">
+              <NavLink onClick={toggleMenu} className="menu__list-link" to="/services">
                 Послуги
-              </a>
+              </NavLink>
             </li>
             <li className="menu__list-item">
-              <a href="./about.html" className="menu__list-link">
+              <NavLink onClick={toggleMenu} className="menu__list-link" to="/about">
                 Про нас
-              </a>
+              </NavLink>
             </li>
             <li className="menu__list-item">
-              <a href="./contacts.html" className="menu__list-link">
+              <NavLink onClick={toggleMenu} className="menu__list-link" to="/contacts">
                 Контакти
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
