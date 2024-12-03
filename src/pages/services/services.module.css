@@ -1,67 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600,800&display=swap");
 
-/************************services-section*********************/
-.services__cards::before {
-  display: block;
-  border: 2px, solid, #00000026;
-  margin-top: 10px;
-  margin-bottom: 48px;
-  content: "";
-}
 
-.services__cards {
-  display: flex;
-  flex-direction: column;
-}
-.services__card {
-  position: relative;
-}
 
-.services__cardTitle {
-  margin-bottom: 24px;
-  padding-right: 40px;
-}
-.services__text li {
-  padding: 7px 0px;
-  line-height: 30px;
-  font-size: calc(16px + 3 * (100vw / 1230));
-}
 
-@media (max-width: 768px) {
-  .services__text li {
-    font-size: calc(16px + (3 + 3 * 0.7) * ((100vw - 320px) / 1230));
-    line-height: 20px;
-  }
-}
 
-.services__card::after {
-  margin: 24px 0px;
-  display: block;
-  content: "";
-  border: 0.05px solid #00000026;
-}
 
-.iconArrow {
-  color: darkgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  right: 0px;
-  top: 0px;
-  width: 24px;
-  height: 24px;
-}
-
-.iconArrow:hover {
-  background-color: rgba(189, 189, 189, 0.2);
-  border-radius: 50%;
-}
-
-.services__text {
-  display: none;
-  margin-bottom: 70px;
-  text-align: justify;
-}

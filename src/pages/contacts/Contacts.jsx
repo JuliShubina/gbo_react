@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../../components/hero/Hero";
 import styles from "./contacts.module.css";
 
@@ -17,7 +16,7 @@ const Contacts = () => {
                 </a>
               </span>
             </p>
-            <p>Понеділок – п'ятниця: 9:00–15:00</p>
+            <p>Понеділок – п&#39;ятниця: 9:00–15:00</p>
             <p>Субота: 9:00–15:00</p>
             <p>Неділя: вихідний</p>
           </div>
@@ -32,7 +31,7 @@ const Contacts = () => {
             <div className={styles.map_responsive}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.5999247731484!2d35.03440857594106!3d48.5217336243398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d958bea63a0a01%3A0xc90a5f6c52c074c5!2z0YPQuy4g0JzQsNGA0LjQuCDQm9C40YHQuNGH0LXQvdC60L4sIDEwLCDQlNC90LXQv9GALCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1730793941810!5m2!1sru!2sua"
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
