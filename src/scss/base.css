@@ -1,6 +1,6 @@
 body {
-  /* position: relative;
-  z-index: -10; */
+  position: relative;
+  z-index: -20;
   color: rgb(33, 33, 33);
   font-family: "Playfair Display", serif;
 }
@@ -43,14 +43,14 @@ body {
   }
 }
 
-/* main {
+main {
   position: relative;
   z-index: -10;
-} */
+}
 
 .wrapper {
-  /* position: relative;
-  z-index: -10; */
+  position: relative;
+  z-index: -10;
   min-height: 100%;
   display: flex;
   flex-direction: column;

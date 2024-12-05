@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import "../../scss/base.css";
 import services_1 from "../../images/services_1.webp";
@@ -7,6 +7,10 @@ import services_3 from "../../images/services_3.jpg";
 import HeroIcon from "../../components/hero icon/HeroIcon";
 
 const Home = () => {
+  useEffect(() => {
+    // Прокрутка страницы к началу
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="main">
       <section className="hero intersection hero__background">
@@ -54,15 +58,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div id="popup" className="popup">
-        <div className="popup__content">
-          <div className="popup__text">
-            <a className="popup__phone" href="tel:+380992665168">
-              Зателефонувати нам: 099 548 57 67
-            </a>
-          </div>
-        </div>
-      </div>
     </main>
   );
 };

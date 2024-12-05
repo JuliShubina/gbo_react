@@ -5,9 +5,9 @@ import "./hero__icon.css";
 
 const HeroIcon = () => {
   const scrollToContent = (sectionId) => {
-    const element = document.getElementById(sectionId); // Find the element with the ID
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" }); // Smooth scrolling
+      element.scrollIntoView({ behavior: "smooth" });
     } else {
       console.warn("Element with ID", sectionId, "not found");
     }
