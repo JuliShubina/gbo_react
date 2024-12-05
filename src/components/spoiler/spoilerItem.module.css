@@ -41,20 +41,17 @@
   height: 20px;
 }
 
-/* .services__card .iconArrow {
+.services__card .iconArrow {
   font-size: 2rem;
   transition: 0.5s ease-in-out;
-} */
+}
 .iconArrow.active {
   rotate: 180deg;
 }
-/* .content_container {
-  margin-bottom: 20px;
-} */
 
-.services__card .content_container {
+/* .services__card .content_container {
   transition: height 0.7s ease-in-out;
-}
+} */
 
 .services__text {
   text-align: justify;
@@ -69,6 +66,5 @@
 @media (max-width: 768px) {
   .services__text li {
     font-size: calc(16px + (3 + 3 * 0.7) * ((100vw - 320px) / 1230));
-    line-height: 10px;
   }
 }

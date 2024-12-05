@@ -1,21 +1,21 @@
 import { useState } from "react";
 import styles from "./spoiler.module.css";
 
-import data from "../../data/services.json";
+import content from "../../data/services.json";
 import SpoilerItem from "./SpoilerItem";
 
 const Spoiler = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndices, setActiveIndices] = useState([]); //массив индексов всех открытых спойлеров.
 
   const handleItemClick = (index) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+    setActiveIndices((prevIndices) => (prevIndices.includes(index) ? prevIndices.filter((i) => i !== index) : [...prevIndices, index]));
   };
 
   return (
     <div className="spoiler">
       <div className={styles.services__cards}>
-        {data.map((item, index) => (
-          <SpoilerItem key={index} title={item.title} content={item.content} isOpen={activeIndex === index} onClick={() => handleItemClick(index)} />
+        {content.map((item, index) => (
+          <SpoilerItem key={index} title={item.title} content={item.content} isOpen={activeIndices.includes(index)} onClick={() => handleItemClick(index)} />
         ))}
       </div>
     </div>
