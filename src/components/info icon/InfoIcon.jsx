@@ -18,8 +18,10 @@ const InfoIcon = () => {
 
       <div className={`${styles.popup_content} ${toggle ? styles.open : ""}`}>
         <div className={styles.popup__text}>
+          {" "}
+          Зателефонувати нам:
           <a className={styles.popup__phone} href="tel:+380992665168">
-            Зателефонувати нам: 099 548 57 67
+            +38(099) 548 57 67
           </a>
         </div>
       </div>

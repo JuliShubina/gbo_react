@@ -24,5 +24,6 @@
   .footer__phone {
     cursor: pointer;
     color: rgb(12, 89, 147);
+    pointer-events: auto;
   }
 }

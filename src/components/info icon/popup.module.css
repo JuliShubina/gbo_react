@@ -88,5 +88,6 @@
     cursor: pointer;
     color: rgb(10, 73, 121);
     font-weight: 500;
+    pointer-events: auto;
   }
 }
