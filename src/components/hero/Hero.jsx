@@ -2,10 +2,10 @@ import styles from "./hero.module.css";
 import HeroIcon from "../../components/hero icon/HeroIcon";
 import PropTypes from "prop-types";
 import { useMediaQuery } from "react-responsive";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Hero = ({ title, styleBg = { "--bg-height": "370px" }, beforeHeight = "370px" }) => {
-  console.log(styleBg);
+  const [isBeforeHeight100vh, setIsBeforeHeight100vh] = useState(false);
   const isLandscapeSmallHeight = useMediaQuery({
     query: "(max-height: 500px) and (orientation: landscape)",
   });
@@ -24,13 +24,22 @@ const Hero = ({ title, styleBg = { "--bg-height": "370px" }, beforeHeight = "370
       window.removeEventListener("scroll", parallax); // Убираем обработчик при размонтировании
     };
   }, []);
+  useEffect(() => {
+    const section = document.querySelector(`.${styles.hero}`);
+    if (section) {
+      const computedStyle = getComputedStyle(section);
+      const beforeHeight = computedStyle.getPropertyValue("--before-height").trim();
+      setIsBeforeHeight100vh(beforeHeight === "100vh");
+    }
+  }, [styleBg]);
+  const shouldRenderHeroIcon = isLandscapeSmallHeight || isBeforeHeight100vh;
 
   return (
     <section onScroll={parallax} className={`${styles.hero}  ${styles.hero__background}`} style={{ ...styleBg, "--before-height": beforeHeight }}>
       <div className="container">
         <div className={styles.hero__content}>
           <h1 className={styles.hero__contentTitle}>{title}</h1>
-          {isLandscapeSmallHeight && <HeroIcon />}
+          {shouldRenderHeroIcon && <HeroIcon />}
         </div>
       </div>
     </section>
@@ -40,5 +49,6 @@ const Hero = ({ title, styleBg = { "--bg-height": "370px" }, beforeHeight = "370
 Hero.propTypes = {
   title: PropTypes.string.isRequired,
   styleBg: PropTypes.object,
+  beforeHeight: PropTypes.string,
 };
 export default Hero;
