@@ -5,15 +5,15 @@ import services_1 from "../../images/services_1.webp";
 import services_2 from "../../images/services_2.jpg";
 import services_3 from "../../images/services_3.jpg";
 import HeroIcon from "../../components/hero icon/HeroIcon";
+import Hero from "../../components/hero/Hero";
 
 const Home = () => {
   useEffect(() => {
-    // Прокрутка страницы к началу
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Прокрутка страницы к началу /** ? может и не нужна?**/
   }, []);
   return (
     <main className="main">
-      <section className="hero intersection hero__background">
+      {/* <section className="hero intersection hero__background">
         <div className="container">
           <div className="hero__content">
             <h1 className="hero__content-title">ГБО для вашого авто</h1>
@@ -21,7 +21,8 @@ const Home = () => {
             <HeroIcon />
           </div>
         </div>
-      </section>
+      </section> */}
+      <Hero styleBg={{ height: "100vh" }} beforeHeight="100vh" title="ГБО для вашого авто" />
       <section className="services">
         <div className="container">
           <h2 className="services__title">Повний спектр послуг</h2>

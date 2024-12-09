@@ -1,65 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600,800&display=swap");
 
-/***************************************************** main ******************************************/
-/*hero*/
-
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
-}
-.hero__content {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero__content-title {
-  /* font-size: 72px; */
-  font-weight: 700;
-  letter-spacing: -0.8px;
-  line-height: 79.92px;
-  font-size: calc(40px + 32 * (100vw / 1230));
-}
-@media (max-width: 768px) {
-  .hero__content-title {
-    font-size: calc(40px + (32 + 32 * 0.7) * ((100vw - 320px) / 1230));
-  }
-}
-
-.hero__background {
-  position: relative;
-
-  background-image: url("../../images/hero-image.jpg");
-
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin: 0 auto;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  z-index: -4;
-}
-
-.hero__background::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-}
-
 /************************services-section*********************/
 .services__title::before {
   display: block;
