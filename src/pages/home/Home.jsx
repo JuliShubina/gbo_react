@@ -22,7 +22,8 @@ const Home = () => {
           </div>
         </div>
       </section> */}
-      <Hero styleBg={{ height: "100vh" }} beforeHeight="100vh" title="ГБО для вашого авто" />
+      {/* <Hero styleBg={{ height: "100vh" }} beforeHeight="100vh" title="ГБО для вашого авто" /> */}
+      <Hero styleBg={{ "--bg-height": "100vh" }} beforeHeight="100vh" title="ГБО для вашого авто" />
       <section className="services">
         <div className="container">
           <h2 className="services__title">Повний спектр послуг</h2>

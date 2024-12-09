@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useMediaQuery } from "react-responsive";
 import { useEffect } from "react";
 
-const Hero = ({ title, styleBg = { height: "370px" }, beforeHeight = "370px" }) => {
+const Hero = ({ title, styleBg = { "--bg-height": "370px" }, beforeHeight = "370px" }) => {
   console.log(styleBg);
   const isLandscapeSmallHeight = useMediaQuery({
     query: "(max-height: 500px) and (orientation: landscape)",
