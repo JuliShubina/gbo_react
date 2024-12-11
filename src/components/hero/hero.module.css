@@ -46,7 +46,7 @@
   position: relative;
 
   background-image: url("../../images/hero-image.jpg");
-
+  background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,25 +58,12 @@
   z-index: -4;
 }
 
-.hero__background::before {
-  content: "";
-  /* background-image: url("../images/hero-background.jpg"); */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--before-height);
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-}
 @media (max-width: 768px) {
-  .hero__background::before,
   .hero__background {
     --bg-height: 320px;
   }
 }
 @media (max-width: 480px) {
-  .hero__background::before,
   .hero__background {
     --bg-height: 250px;
   }

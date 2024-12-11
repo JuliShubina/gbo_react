@@ -13,17 +13,7 @@ const Home = () => {
   }, []);
   return (
     <main className="main">
-      {/* <section className="hero intersection hero__background">
-        <div className="container">
-          <div className="hero__content">
-            <h1 className="hero__content-title">ГБО для вашого авто</h1>
-            <h2>надійність, економія, комфорт</h2>
-            <HeroIcon />
-          </div>
-        </div>
-      </section> */}
-      {/* <Hero styleBg={{ height: "100vh" }} beforeHeight="100vh" title="ГБО для вашого авто" /> */}
-      <Hero styleBg={{ "--bg-height": "100vh" }} beforeHeight="100vh" title="ГБО для вашого авто" />
+      <Hero styleBg={{ "--bg-height": "100vh" }} title="ГБО для вашого авто" titlePlus="надійність, економія, комфорт" />
       <section className="services">
         <div className="container">
           <h2 className="services__title">Повний спектр послуг</h2>
