@@ -9,6 +9,11 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className={`header ${menuOpen ? "open" : ""}`}>
       <div className="header__inner">
@@ -24,22 +29,22 @@ const Header = () => {
         <nav className="menu">
           <ul className="menu__list">
             <li className="menu__list-item">
-              <NavLink onClick={toggleMenu} to="/" className="menu__list-link">
+              <NavLink onClick={closeMenu} to="/" className="menu__list-link">
                 Головна
               </NavLink>
             </li>
             <li className="menu__list-item">
-              <NavLink onClick={toggleMenu} className="menu__list-link" to="/services">
+              <NavLink onClick={closeMenu} className="menu__list-link" to="/services">
                 Послуги
               </NavLink>
             </li>
             <li className="menu__list-item">
-              <NavLink onClick={toggleMenu} className="menu__list-link" to="/about">
+              <NavLink onClick={closeMenu} className="menu__list-link" to="/about">
                 Про нас
               </NavLink>
             </li>
             <li className="menu__list-item">
-              <NavLink onClick={toggleMenu} className="menu__list-link" to="/contacts">
+              <NavLink onClick={closeMenu} className="menu__list-link" to="/contacts">
                 Контакти
               </NavLink>
             </li>
