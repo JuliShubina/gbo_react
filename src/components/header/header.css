@@ -6,6 +6,10 @@
   height: 56px;
   z-index: 10;
   padding: 0px 15px 0px 15px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.header.scrolled {
   background-color: black;
 }
 .header__inner {
@@ -18,8 +22,11 @@
 .menu__list {
   display: flex;
   gap: 24px;
+  align-items: center;
 }
-
+.menu__list-item {
+  height: 100%;
+}
 .menu__list-link {
   color: rgba(255, 255, 255, 0.87);
   font-size: 14.67px;
@@ -44,6 +51,46 @@
   font-size: calc(20px + 4 * (100vw / 1230));
   font-weight: 700;
 }
+
+.menu__dropdown-list {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  background-color: black;
+  padding: 10px 0;
+  list-style: none;
+  margin: 0;
+  z-index: 10;
+}
+
+.menu__dropdown-list.open {
+  display: block;
+}
+
+.menu__dropdown-item {
+  padding: 5px 20px;
+}
+
+.menu__dropdown-item a {
+  color: rgb(189, 189, 189);
+  text-decoration: none;
+}
+
+.menu__dropdown-item a:hover {
+  color: white;
+}
+.dropdown_icon {
+  color: white;
+  font-size: 14px;
+}
+.only-style {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .logo {
     font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1230));
