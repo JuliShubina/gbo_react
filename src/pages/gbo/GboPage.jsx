@@ -1,7 +1,7 @@
 import Hero from "../../components/hero/Hero";
 import Spoiler from "../../components/spoiler/Spoiler";
 import styles from "../../scss/servicesPage.module.css";
-import { Navigation, Pagination } from "swiper/modules";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,7 +28,6 @@ const GboPage = () => {
             <h3 className={styles.title}>Наша робота</h3>
             <div className={styles.grid_container}>
               <div className={styles.grid_item}>
-                {/* <div className={styles.slider_container}> */}
                 <Swiper
                   slidesPerGroup={1}
                   slidesPerView={1}
@@ -37,7 +36,11 @@ const GboPage = () => {
                     dynamicBullets: true,
                     clickable: true,
                   }}
-                  modules={[Navigation, Pagination]}
+                  keyboard={{
+                    enabled: true,
+                    onlyInViewport: true,
+                  }}
+                  modules={[Keyboard, Navigation, Pagination]}
                   onSwiper={(swiper) => console.log("Active Index:", swiper.activeIndex)}
                   onSlideChange={(swiper) => console.log("Active Index:", swiper.activeIndex)}
                 >
@@ -57,7 +60,6 @@ const GboPage = () => {
                     <img src={gbo_5} />
                   </SwiperSlide>
                 </Swiper>
-                {/* </div> */}
               </div>
             </div>
           </div>
