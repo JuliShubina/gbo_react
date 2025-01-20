@@ -3,7 +3,6 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 import InfoIcon from "./components/info icon/InfoIcon";
-import Services from "./pages/services/Services";
 import About from "./pages/about us/About";
 import Contacts from "./pages/contacts/Contacts";
 import { Routes, Route } from "react-router-dom";
@@ -21,7 +20,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services">
-            <Route index element={<Services />} />
             <Route path="gbo" element={<GboPage />} />
             <Route path="autoelectric" element={<AutoElectrician />} />
             <Route path="cooling-system" element={<CoolingSystem />} />
