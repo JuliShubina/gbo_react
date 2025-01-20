@@ -1,9 +1,5 @@
-import React from "react";
 import styles from "./about.module.css";
 import Hero from "../../components/hero/Hero";
-import our_work1 from "../../images/our_work1.jpg";
-import our_work2 from "../../images/our_work2.jpg";
-import our_work3 from "../../images/our_work3.jpg";
 
 const About = () => {
   return (
@@ -30,7 +26,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className={styles.our_work}>
+      {/* <section className={styles.our_work}>
         <div className="container">
           <h3 className={styles.about__title}>Наша робота</h3>
           <div className={styles.about__cards}>
@@ -56,7 +52,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };
