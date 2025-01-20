@@ -2,19 +2,17 @@
   display: flex;
   margin-bottom: 20px;
   flex-direction: column;
-  border-bottom: 1px solid black;
   overflow: hidden;
 }
 .services__card .title_container {
   width: 100%;
   text-align: left;
-  padding: 20px 10px;
+  padding: 20px 0 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  border-bottom: 1px solid black;
   background: transparent;
-  border: none;
   cursor: pointer;
 }
 /* .services__cardTitle {
@@ -55,7 +53,8 @@
 
 .services__text {
   text-align: justify;
-  padding-bottom: 30px;
+  padding: 20px 0 20px 0;
+  padding-left: 0;
 }
 .services__text li {
   padding: 7px 0px;
