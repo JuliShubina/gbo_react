@@ -6,7 +6,11 @@ import InfoIcon from "./components/info icon/InfoIcon";
 import Services from "./pages/services/Services";
 import About from "./pages/about us/About";
 import Contacts from "./pages/contacts/Contacts";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import GboPage from "./pages/gbo/GboPage";
+
+import CoolingSystem from "./pages/coolingSystem/CoolingSystem";
+import AutoElectrician from "./pages/autoElectrician/AutoElectrician";
 
 function App() {
   return (
@@ -16,7 +20,12 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services">
+            <Route index element={<Services />} />
+            <Route path="gbo" element={<GboPage />} />
+            <Route path="autoelectric" element={<AutoElectrician />} />
+            <Route path="cooling-system" element={<CoolingSystem />} />
+          </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
