@@ -8,9 +8,7 @@ const Services = () => {
     <main className="main">
       <Hero title="Послуги" />
       <section className="services">
-        <div className="container">
-          <Spoiler />
-        </div>
+        <div className="container">{/* <Spoiler /> */}</div>
       </section>
     </main>
   );
