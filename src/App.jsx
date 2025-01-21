@@ -7,6 +7,7 @@ import About from "./pages/about us/About";
 import Contacts from "./pages/contacts/Contacts";
 import { Routes, Route } from "react-router-dom";
 import GboPage from "./pages/gbo/GboPage";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 
 import CoolingSystem from "./pages/coolingSystem/CoolingSystem";
 import AutoElectrician from "./pages/autoElectrician/AutoElectrician";
@@ -16,7 +17,7 @@ function App() {
     <>
       <div className="wrapper">
         <Header />
-
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services">
