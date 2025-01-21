@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import "../../scss/base.css";
 import services_1 from "../../images/services_1.webp";
 import services_2 from "../../images/services_2.jpg";
 import services_3 from "../../images/services_3.jpg";
-import HeroIcon from "../../components/hero icon/HeroIcon";
 import Hero from "../../components/hero/Hero";
 
 const Home = () => {
@@ -29,19 +29,25 @@ const Home = () => {
               <div className="services__card-img">
                 <img src={services_1} alt="Ілюстрація роботи механіка" />
               </div>
-              <h3 className="services__card-title">Налаштування та діагностика ГБО</h3>
+              <Link to={"/services/gbo"} className="services__card-link">
+                <h3 className="services__card-title">ГБО</h3>
+              </Link>
             </div>
             <div className="services__card">
               <div className="services__card-img">
                 <img src={services_2} alt="Ілюстрація роботи механіка" />
               </div>
-              <h3 className="services__card-title">Обслуговування та заміна компонентів ГБО</h3>
+              <Link to={"/services/autoelectric"} className="services__card-link">
+                <h3 className="services__card-title">Автоелектрика</h3>
+              </Link>
             </div>
             <div className="services__card">
               <div className="services__card-img">
                 <img src={services_3} alt="Ілюстрація роботи механіка" />
               </div>
-              <h3 className="services__card-title">Модернізація ГБО та додаткові послуги</h3>
+              <Link to={"/services/cooling-system"} className="services__card-link">
+                <h3 className="services__card-title">Система охолодження</h3>
+              </Link>
             </div>
           </div>
         </div>
