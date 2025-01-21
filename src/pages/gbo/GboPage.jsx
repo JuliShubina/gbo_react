@@ -26,42 +26,39 @@ const GboPage = () => {
             </p>
             <Spoiler from="GboPage" />
             <h3 className={styles.title}>Наша робота</h3>
-            <div className={styles.grid_container}>
-              <div className={styles.grid_item}>
-                <Swiper
-                  slidesPerGroup={1}
-                  slidesPerView={1}
-                  navigation={true}
-                  pagination={{
-                    dynamicBullets: true,
-                    clickable: true,
-                  }}
-                  keyboard={{
-                    enabled: true,
-                    onlyInViewport: true,
-                  }}
-                  modules={[Keyboard, Navigation, Pagination]}
-                  onSwiper={(swiper) => console.log("Active Index:", swiper.activeIndex)}
-                  onSlideChange={(swiper) => console.log("Active Index:", swiper.activeIndex)}
-                >
-                  <SwiperSlide>
-                    <img src={gbo_1} />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={gbo_2} />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={gbo_3} />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={gbo_4} />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={gbo_5} />
-                  </SwiperSlide>
-                </Swiper>
-              </div>
-            </div>
+            <Swiper
+              style={{ width: "100%", height: "500px", marginBottom: "20px" }}
+              slidesPerGroup={1}
+              slidesPerView={1}
+              navigation={true}
+              pagination={{
+                dynamicBullets: true,
+                clickable: true,
+              }}
+              keyboard={{
+                enabled: true,
+                onlyInViewport: true,
+              }}
+              modules={[Keyboard, Navigation, Pagination]}
+              onSwiper={(swiper) => console.log("Active Index:", swiper.activeIndex)}
+              onSlideChange={(swiper) => console.log("Active Index:", swiper.activeIndex)}
+            >
+              <SwiperSlide>
+                <img className={styles.img} src={gbo_1} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className={styles.img} src={gbo_2} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className={styles.img} src={gbo_3} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className={styles.img} src={gbo_4} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className={styles.img} src={gbo_5} />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </section>
       </main>

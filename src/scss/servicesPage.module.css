@@ -18,37 +18,16 @@
   letter-spacing: -0.6px;
   line-height: 55.68px;
 }
-.grid_container {
-  display: grid;
-
-  width: 100%;
-  grid-template-columns: repeat(12, 1fr);
-  margin-bottom: 50px;
-}
-
-.grid_item {
-  grid-column: 3 / span 8;
-}
-
-.swiper {
-  width: 100%;
-  height: auto;
-}
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  height: 100%;
 }
-
-.swiper-slide img {
-  display: block;
+.img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
