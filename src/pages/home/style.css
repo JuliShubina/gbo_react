@@ -31,7 +31,6 @@
 .services__card-title {
   padding-top: 20px;
   text-align: center;
-
   line-height: 42px;
 }
 .services__card-img img {
@@ -53,6 +52,10 @@
   text-indent: 1.5em;
   line-height: 25.76px;
   /* margin-top: 16px; */
+}
+
+.services__card-link {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
