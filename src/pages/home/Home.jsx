@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import "../../scss/base.css";
-import services_1 from "../../images/services_1.webp";
+import services_1 from "../../images/services_1.jpg";
 import services_2 from "../../images/services_2.jpg";
 import services_3 from "../../images/services_3.jpg";
 import Hero from "../../components/hero/Hero";
